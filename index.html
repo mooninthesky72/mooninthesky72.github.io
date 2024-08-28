@@ -1,7 +1,58 @@
 <!doctype html>
 <html lang='en'>
     <head id="head">
-        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                background-image: linear-gradient(to left, #393939 0%, #060121 50%, #241f42 100%)
+            }
+            @keyframes anim1 {
+                    0% {opacity:0}
+                    100% {opacity:1}
+            }
+
+            @keyframes animMoon {
+                0% {transform:scale(1, 1);}
+                33% {transform:rotate(190deg)}
+                50% {transform:scale(0.95, 0.95);}
+                66% {transform:rotate(180deg)}
+                100% {transform:scale(1.05, 1.05); transform:rotate(-170deg)}
+
+            }
+
+            @keyframes h1TextAnim {
+                0% {text-shadow: 0px, 0px, 1px, #0b033c}
+                100% {text-shadow: 10px, 10px, 1px, #13056d}
+            }
+            
+            #div1Id  {
+                position: sticky; font-family: 'Indie Flower', Arial, sans-serif; z-index: 0;color: rgba(71, 20, 190, 1); font-weight: 50; font-size: 40px; text-align: center; padding-top: 40px;
+                animation-name: anim1;
+                animation-duration: 1s;
+                animation-timing-function: ease-in;
+            }
+
+            #h1Id {
+                animation-name: h1TextAnim;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+            }
+
+            #moonImage {
+                position: relative;
+                animation-name: anim1;
+                animation-duration: 1.3s;
+                animation-timing-function: ease-in;
+            }
+
+            #moonImage img {
+                width: 450px; height: 320px; position: absolute; top: -105px; left:-50px;
+                animation-name: animMoon;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+            }
+        </style>
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower:regular" rel="stylesheet" />
         <title>moon website</title>
         <meta charset = 'utf-8'>
